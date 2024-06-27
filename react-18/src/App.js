@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import DemoComponent from './demo';
+import DemoComponent from './demo1';
 import { Suspense } from 'react';
 
 function App() {
