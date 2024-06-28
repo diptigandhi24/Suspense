@@ -7,7 +7,15 @@ function App() {
   return (
     <div className="App">
       <Suspense fallback={<p>Loading...</p>}>
-        <DemoComponent compId = {"1"}/>
+        <DemoComponent compId = {0}/>
+       
+        
+      </Suspense>
+      <p>keeping the break between two promises to fire itself</p>
+      <Suspense fallback={<p>Loading...</p>}>
+       
+      <DemoComponent compId = {3}/>
+      
       </Suspense>
 
     </div>
