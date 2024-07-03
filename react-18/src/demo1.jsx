@@ -4,11 +4,12 @@ let savedPowers = null;
 console.log("Initial value of savedPowers", savedPowers)
 const fetchPowers = (compId) => {
   
-  let delay = 3000*compId;
-  console.log("Delay start",compId,delay);
+  let delay = 1000*compId;
+ 
   return new Promise((resolve, reject) => {
+    console.log("Delay start",compId,delay);
     setTimeout(() => {
-      console.log("Before assigning", compId);
+     
         savedPowers = [`first${compId}`,`second${compId}`]
         console.log("Delay finished",compId);
         resolve();
@@ -20,9 +21,9 @@ const DemoComponent = ({compId}) => {
 
 const  powers = savedPowers;
   if (!powers) {
+    console.log("DemoComponent");
         throw fetchPowers(compId)
     }
-  console.log("Before rendering the save powers value",powers)
   return powers.map(value => <div key={value}>{value}</div>);
 }
 
