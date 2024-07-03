@@ -18,10 +18,10 @@ const fetchPowers = (compId) => {
 }
 
 const DemoComponent = ({compId}) => {
-
+  console.log(" Render DemoComponent");
 const  powers = savedPowers;
   if (!powers) {
-    console.log("DemoComponent");
+   
         throw fetchPowers(compId)
     }
   return powers.map(value => <div key={value}>{value}</div>);

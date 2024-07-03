@@ -8,8 +8,9 @@ function App() {
   return (
     <div className="App">
       <Suspense fallback={<p>Loading...</p>}>
-      <DemoComponent1 compId = {3}/>
+     
       <DemoComponent compId = {6}/>
+      <DemoComponent1 compId = {3}/>
         
        
         
